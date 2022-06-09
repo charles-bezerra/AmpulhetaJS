@@ -55,9 +55,10 @@ function printMatrix (M, n) {
 
 const n = parseInt(process.argv[2]);
 const middle = parseInt(n/2);
+const bottom = JSON.parse(process.argv[3]) || false;
 
 const M = [];
 createMatrix(M, n);    
 fillMatrix(M);
-fillEmisphere(M, false, middle);
+fillEmisphere(M, bottom, middle);
 printMatrix(M, n);
